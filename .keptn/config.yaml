@@ -1,0 +1,3 @@
+services:
+- name: right-leg
+  triggerevent: sh.keptn.event.dev.artifact-delivery.triggered
