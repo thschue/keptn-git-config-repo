@@ -1,6 +1,5 @@
 metadata:
   initbranch: dev
-
 services:
 - name: right-leg
   triggerevent: sh.keptn.event.dev.artifact-delivery.triggered
@@ -13,4 +12,6 @@ services:
 - name: hats
   triggerevent: sh.keptn.event.dev.artifact-delivery.triggered
 - name: main
+  triggerevent: sh.keptn.event.dev.artifact-delivery.triggered
+- name: podtato-head-main
   triggerevent: sh.keptn.event.dev.artifact-delivery.triggered
