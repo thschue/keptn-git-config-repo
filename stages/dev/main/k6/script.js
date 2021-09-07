@@ -10,7 +10,7 @@ export let options = {
 };
 
 export default function () {
-  const res = http.get('http://podtato-main.svc.podtatohead-dev.cluster.local:9000');
+  const res = http.get('http://podtato-main.podtatohead-dev.svc.cluster.local:9000');
   const result = check(res, {
     'status is 200': (r) => r.status == 200,
   });
