@@ -1,4 +1,4 @@
-{{ $componentName := "right-arm" }}
+{{ $componentName := "right-leg" }}
 {{ $serviceType := .Values.rightArm.serviceType }}
 {{ $servicePort := .Values.rightArm.servicePort }}
 ---
