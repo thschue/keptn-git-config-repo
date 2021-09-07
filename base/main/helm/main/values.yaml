@@ -10,7 +10,7 @@ images:
 
 # keep ports in sync with podtato-services/main/pkg/provider.go
 main:
-  repositoryBasename: podtato-main
+  repositoryBasename: podtato-main-distroless
   tag: "v1-latest-dev"
   serviceType: ClusterIP 
   servicePort: 9000
