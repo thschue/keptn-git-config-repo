@@ -13,5 +13,3 @@ services:
   triggerevent: sh.keptn.event.dev.artifact-delivery.triggered
 - name: main
   triggerevent: sh.keptn.event.dev.artifact-delivery.triggered
-- name: podtato-head-main
-  triggerevent: sh.keptn.event.dev.artifact-delivery.triggered
