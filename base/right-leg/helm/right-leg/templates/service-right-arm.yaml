@@ -1,6 +1,6 @@
 {{ $componentName := "right-leg" }}
-{{ $serviceType := .Values.rightArm.serviceType }}
-{{ $servicePort := .Values.rightArm.servicePort }}
+{{ $serviceType := .Values.rightLeg.serviceType }}
+{{ $servicePort := .Values.rightLeg.servicePort }}
 ---
 apiVersion: v1
 kind: Service
