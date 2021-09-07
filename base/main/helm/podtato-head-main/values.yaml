@@ -1,4 +1,4 @@
-nameOverride: "main-dev"
+nameOverride: ""
 fullnameOverride: ""
 
 # applies to all deployments in this chart
@@ -11,32 +11,32 @@ images:
 # keep ports in sync with podtato-services/main/pkg/provider.go
 main:
   repositoryBasename: podtato-main
-  tag: "{{ keptn/imageVersion }}"
-  serviceType: LoadBalancer
+  tag: "v1-latest-dev"
+  serviceType: ClusterIP 
   servicePort: 9000
 hats:
   repositoryBasename: podtato-hats
-  tag: "{{ keptn/imageVersion }}"
+  tag: "v1-latest-dev"
   serviceType: ClusterIP
   servicePort: 9001
 leftLeg:
   repositoryBasename: podtato-left-leg
-  tag: "{{ keptn/imageVersion }}"
+  tag: "v1-latest-dev"
   serviceType: ClusterIP
   servicePort: 9002
 leftArm:
   repositoryBasename: podtato-left-arm
-  tag: "{{ keptn/imageVersion }}"
+  tag: "v1-latest-dev"
   serviceType: ClusterIP
   servicePort: 9003
 rightLeg:
   repositoryBasename: podtato-right-leg
-  tag: "{{ keptn/imageVersion }}"
+  tag: "v1-latest-dev"
   serviceType: ClusterIP
   servicePort: 9004
 rightArm:
   repositoryBasename: podtato-right-arm
-  tag: "{{ keptn/imageVersion }}"
+  tag: "v1-latest-dev"
   serviceType: ClusterIP
   servicePort: 9005
 
