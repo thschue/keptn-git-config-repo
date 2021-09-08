@@ -18,7 +18,7 @@ spec:
       sequences:
         - name: "artifact-delivery"
           triggeredOn:
-            - event: "sandbox.artifact-delivery.finished"
+            - event: "dev.artifact-delivery.finished"
           tasks:
             - name: approval
               properties: 
