@@ -13,3 +13,5 @@ services:
   triggerevent: sh.keptn.event.dev.artifact-delivery.triggered
 - name: main
   triggerevent: sh.keptn.event.dev.artifact-delivery.triggered
+- name: dynatrace
+  triggerevent: sh.keptn.event.dev.artifact-delivery.triggered
