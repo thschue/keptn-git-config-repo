@@ -11,7 +11,7 @@ export let options = {
 };
 
 export default function () {
-  const res = http.get('http://podtato-right-arm.podtatohead-dev.svc.cluster.local:9005');
+  const res = http.get('http://podtato-right-arm.podtatohead-dev.svc.cluster.local:9005/images/right-arm');
   const result = check(res, {
     'status is 200': (r) => r.status == 200,
   });
