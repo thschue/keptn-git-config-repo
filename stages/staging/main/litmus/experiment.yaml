@@ -2,7 +2,7 @@ apiVersion: litmuschaos.io/v1alpha1
 kind: ChaosEngine
 metadata:
   name: head-chaos
-  namespace: litmus
+  namespace: podtatohead-staging
 spec:
   appinfo:
     applabel: 'app.kubernetes.io/name=podtato-head-main'
