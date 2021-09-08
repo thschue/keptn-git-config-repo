@@ -20,14 +20,11 @@ spec:
           triggeredOn:
             - event: "dev.artifact-delivery.finished"
           tasks:
-            - name: approval
-              properties: 
-                pass: manual
-                warning: manual 
             - name: "promotion"
             - name: "deployment"
               properties:
                 deploymentstrategy: "user_managed"
+            - name: "smoke-test"
 
     - name: "production"
       sequences:
