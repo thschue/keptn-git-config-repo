@@ -22,6 +22,7 @@ spec:
             - event: "dev.artifact-delivery.finished"
           tasks:
             - name: "promotion"
+            - name: "monaco"
             - name: "deployment"
               properties:
                 deploymentstrategy: "user_managed"
