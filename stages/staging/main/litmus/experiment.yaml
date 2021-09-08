@@ -19,14 +19,14 @@ spec:
           env:
             # set chaos duration (in sec) as desired
             - name: TOTAL_CHAOS_DURATION
-              value: '10'
+              value: '600'
 
             - name: RAMP_TIME
               value: '10'
 
             # set chaos interval (in sec) as desired
             - name: CHAOS_INTERVAL
-              value: '15'
+              value: '30'
 
             # pod failures without '--force' & default terminationGracePeriodSeconds
             - name: FORCE
