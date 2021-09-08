@@ -55,6 +55,13 @@ spec:
             - name: http
               containerPort: 9000
               protocol: TCP
+          env:
+            - name: DT_RELEASE_VERSION
+              value: {{ .Chart.AppVersion }}
+            - name: DT_RELEASE_STAGE
+              value: {{ .Values.stage }}
+            - name: DT_RELEASE_PRODUCT
+              value: "podtato-head-left-leg"
           # livenessProbe:
           #   httpGet:
           #     path: /
