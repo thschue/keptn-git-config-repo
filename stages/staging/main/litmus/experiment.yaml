@@ -19,7 +19,7 @@ spec:
           env:
             # set chaos duration (in sec) as desired
             - name: TOTAL_CHAOS_DURATION
-              value: '600'
+              value: '300'
 
             - name: RAMP_TIME
               value: '10'
