@@ -1,12 +1,16 @@
+
 # applies to all deployments in this chart
 replicaCount: 2
+images:
+  repositoryDirname: ghcr.io/podtato-head
+  pullPolicy: IfNotPresent
+  pullSecrets: []
 
-# keep ports in sync with podtato-services/main/pkg/provider.go
-main:
-  repositoryBasename: podtato-main
-  tag: "{{ keptn/imageVersion }}"
+leftLeg:
+  repositoryBasename: podtato-left-leg
+  tag: "v1-latest-dev"
   serviceType: ClusterIP
-  servicePort: 9000
+  servicePort: 9002
 
 autoscaling:
   enabled: true
@@ -14,4 +18,3 @@ autoscaling:
   maxReplicas: 6
   targetCPUUtilizationPercentage: 80
   # targetMemoryUtilizationPercentage: 80
-

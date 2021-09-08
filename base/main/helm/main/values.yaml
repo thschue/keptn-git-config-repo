@@ -4,15 +4,15 @@ fullnameOverride: ""
 # applies to all deployments in this chart
 replicaCount: 1
 images:
-  repositoryDirname: thschue
+  repositoryDirname: ghcr.io/podtato-head
   pullPolicy: IfNotPresent
   pullSecrets: []
 
 # keep ports in sync with podtato-services/main/pkg/provider.go
 main:
-  repositoryBasename: podtato-main-distroless
-  tag: "v1-latest-dev"
-  serviceType: ClusterIP 
+  repositoryBasename: podtato-main
+  tag: "{{ keptn/imageVersion }}"
+  serviceType: LoadBalancer
   servicePort: 9000
 hats:
   repositoryBasename: podtato-hats

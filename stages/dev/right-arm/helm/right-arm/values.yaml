@@ -1,12 +1,12 @@
+stage: dev
 # applies to all deployments in this chart
 replicaCount: 2
 
-# keep ports in sync with podtato-services/main/pkg/provider.go
-main:
-  repositoryBasename: podtato-main
+rightArm:
+  repositoryBasename: podtato-right-arm
   tag: "{{ keptn/imageVersion }}"
   serviceType: ClusterIP
-  servicePort: 9000
+  servicePort: 9005
 
 autoscaling:
   enabled: true
