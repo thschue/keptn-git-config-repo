@@ -10,6 +10,7 @@ spec:
         - name: "artifact-delivery"
           tasks:
             - name: "promotion"
+            - name: "monaco"
             - name: "deployment"
               properties:
                 deploymentstrategy: "user_managed"
