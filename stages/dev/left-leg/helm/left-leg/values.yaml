@@ -8,7 +8,7 @@ images:
 
 leftLeg:
   repositoryBasename: podtato-left-leg
-  tag: "v1-latest-dev"
+  tag: "{{ keptn/ImageVersion }}"
   serviceType: ClusterIP
   servicePort: 9002
 

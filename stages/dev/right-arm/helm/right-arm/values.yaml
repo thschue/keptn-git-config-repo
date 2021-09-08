@@ -4,7 +4,7 @@ replicaCount: 2
 
 rightArm:
   repositoryBasename: podtato-right-arm
-  tag: "{{ keptn/imageVersion }}"
+  tag: "{{ keptn/ImageVersion }}"
   serviceType: ClusterIP
   servicePort: 9005
 
