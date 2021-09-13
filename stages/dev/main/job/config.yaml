@@ -3,6 +3,8 @@ actions:
   - name: "infrastructure"
     events:
       - name: "sh.keptn.event.infrastructure-delivery.triggered"
+    tasks:
+      - name: "terraform"
         files:
           - terraform
         image: "hashicorp/terraform:1.0.6"
@@ -17,7 +19,7 @@ actions:
             valueFrom: secret
           - name: keptn-hostname
             valueFrom: secret
-            
+
   - name: "k6-smoke"
     events:
       - name: "sh.keptn.event.smoke-test.triggered"
