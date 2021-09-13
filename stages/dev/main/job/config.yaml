@@ -1,5 +1,23 @@
 apiVersion: v2
 actions:
+  - name: "infrastructure"
+    events:
+      - name: "sh.keptn.event.infrastructure-delivery.triggered"
+        files:
+          - terraform
+        image: "hashicorp/terraform:1.0.6"
+        cmd:
+          - sh
+        args:
+          - /keptn/terraform/terraform.sh
+        env:
+          - name: terraform-google-creds
+            valueFrom: secret
+          - name: keptn-api-token
+            valueFrom: secret
+          - name: keptn-hostname
+            valueFrom: secret
+            
   - name: "k6-smoke"
     events:
       - name: "sh.keptn.event.smoke-test.triggered"
