@@ -11,6 +11,7 @@ spec:
           tasks:
             - name: "promotion"
             - name: "monaco"
+            - name: "infrastructure-delivery"
             - name: "deployment"
               properties:
                 deploymentstrategy: "user_managed"
@@ -23,6 +24,7 @@ spec:
           tasks:
             - name: "promotion"
             - name: "monaco"
+            - name: "infrastructure-delivery"
             - name: "deployment"
               properties:
                 deploymentstrategy: "user_managed"
