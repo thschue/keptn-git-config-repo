@@ -1,9 +1,12 @@
+---
+
 {{- if .Values.bluegreen.enabled }}
 
 {{ $componentName := "main" }}
-  {{ $repoBasename := .Values.main.repositoryBasename }}
-  {{ $repoTag := .Values.main.tag }}
----
+{{ $repoBasename := .Values.main.repositoryBasename }}
+{{ $repoTag := .Values.main.tag }}
+{{ $serviceType := .Values.main.serviceType }}
+{{ $servicePort := .Values.main.servicePort }}
 
 apiVersion: argoproj.io/v1alpha1
 kind: Rollout
@@ -85,16 +88,13 @@ spec:
       # previewService specifies the service to update with the new template hash before promotion.
       # This allows the preview stack to be reachable without serving production traffic.
       # This field is optional.
-      previewService:{{ printf "%s-%s" "podtato" $componentName }}-preview
+      previewService: {{ printf "%s-%s" "podtato" $componentName }}-preview
       # autoPromotionEnabled disables automated promotion of the new stack by pausing the rollout
       # immediately before the promotion. If omitted, the default behavior is to promote the new
       # stack as soon as the ReplicaSet are completely ready/available.
       # Rollouts can be resumed using: `kubectl argo rollouts promote ROLLOUT`
       autoPromotionEnabled: false
 
----
-{{ $serviceType := .Values.main.serviceType }}
-  {{ $servicePort := .Values.main.servicePort }}
 ---
 apiVersion: v1
 kind: Service
