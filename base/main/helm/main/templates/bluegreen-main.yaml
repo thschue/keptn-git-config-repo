@@ -68,7 +68,7 @@ spec:
             - name: DT_RELEASE_STAGE
               value: {{ .Values.stage }}
             - name: DT_RELEASE_PRODUCT
-              value: "podtato-head-main"
+              value: {{ printf "%s-%s" "podtato" $componentName }}
           livenessProbe:
             httpGet:
               path: /

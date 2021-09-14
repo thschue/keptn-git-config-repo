@@ -1,6 +1,6 @@
 {{- if not .Values.bluegreen.enabled }}
 
-{{ $componentName := "main" }}
+  {{ $componentName := "main" }}
 {{ $repoBasename := .Values.main.repositoryBasename }}
 {{ $repoTag := .Values.main.tag }}
 ---
