@@ -32,3 +32,15 @@ actions:
           - sh
         args:
           - /keptn/k6/run-smoke-test.sh
+
+  - name: "release"
+    events:
+      - name: "sh.keptn.event.release.triggered"
+    tasks:
+      - name: "argo-promote"
+
+        image: "quay.io/argoproj/kubectl-argo-rollouts:master"
+        cmd:
+          - sh
+        args:
+          - version
