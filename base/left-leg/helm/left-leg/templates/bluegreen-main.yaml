@@ -71,7 +71,7 @@ spec:
               value: {{ printf "%s-%s" "podtato" $componentName }}
           livenessProbe:
             httpGet:
-              path: /
+              path: podtato-left-leg-7dd674fb68-72tb7
               port: http
           readinessProbe:
             httpGet:
