@@ -1,5 +1,8 @@
 stage: dev
 
+bluegreen:
+  enabled: true
+
 # applies to all deployments in this chart
 replicaCount: 2
 

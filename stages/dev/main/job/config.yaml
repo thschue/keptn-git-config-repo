@@ -40,7 +40,5 @@ actions:
       - name: "argo-promote"
 
         image: "quay.io/argoproj/kubectl-argo-rollouts:master"
-        cmd:
-          - sh
         args:
           - version

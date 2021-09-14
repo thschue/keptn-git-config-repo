@@ -2,4 +2,4 @@
 
 cd /keptn/k6
 
-k6 run --duration 60s --vus 30 script.js
+k6 run --duration 60s --vus 30 smoke.js
