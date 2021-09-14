@@ -38,7 +38,5 @@ actions:
       - name: "sh.keptn.event.release.triggered"
     tasks:
       - name: "argo-promote"
-
         image: "quay.io/argoproj/kubectl-argo-rollouts:master"
-        args:
-          - version
+        args: ["promote","podtato-main","-n","podtatohead-dev"]
