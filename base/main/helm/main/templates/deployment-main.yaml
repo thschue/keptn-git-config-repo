@@ -1,3 +1,5 @@
+{{- if not.Values.bluegreen.enabled }}
+
 {{ $componentName := "main" }}
 {{ $repoBasename := .Values.main.repositoryBasename }}
 {{ $repoTag := .Values.main.tag }}
@@ -72,3 +74,4 @@ spec:
               port: http
           resources:
             {{- toYaml .Values.resources | nindent 12 }}
+  {{- end }}
