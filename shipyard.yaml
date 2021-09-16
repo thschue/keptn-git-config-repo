@@ -18,6 +18,8 @@ spec:
             - name: "smoke-test"
             - name: "release"
             - name: "evaluation"
+              properties:
+                timeframe: "15m"             
 
     - name: "staging" 
       sequences:
