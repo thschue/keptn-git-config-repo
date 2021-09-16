@@ -16,6 +16,7 @@ spec:
               properties:
                 deploymentstrategy: "user_managed"
             - name: "smoke-test"
+            - name: "evaluation"
             - name: "release"
     - name: "staging" 
       sequences:
