@@ -7,7 +7,7 @@ bluegreen:
 # applies to all deployments in this chart
 replicaCount: 1
 images:
-  repositoryDirname: ghcr.io/podtato-head
+  repositoryDirname: ghcr.io/thschue
   pullPolicy: IfNotPresent
   pullSecrets: []
 
