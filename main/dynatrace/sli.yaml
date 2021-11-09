@@ -1,3 +1,0 @@
-spec_version: 0.1.4
-indicators:
-  rt: metricSelector=builtin:service.response.time:avg:names&entitySelector=entityId(podtatohead-main)
