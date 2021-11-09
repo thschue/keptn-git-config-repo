@@ -1,0 +1,113 @@
+{
+  "metadata": {
+    "configurationVersions": [
+      5
+    ],
+    "clusterVersion": "1.232.0.20211105-220657"
+  },
+  "id": "be73083e-1663-4c72-9d96-ae735c5c2b09",
+  "dashboardMetadata": {
+    "name": "KQG;project=podtatohead;service=main;stage=dev",
+    "shared": false,
+    "owner": "thomas.schuetz@dynatrace.com",
+    "sharingDetails": {
+      "linkShared": false,
+      "published": false
+    },
+    "tags": null
+  },
+  "tiles": [
+    {
+      "name": "Response Time (P90);sli=rt;pass=\u003c500;warning=\u003c1000;weight=1",
+      "tileType": "DATA_EXPLORER",
+      "configured": true,
+      "query": "",
+      "type": "",
+      "customName": "Data explorer results",
+      "markdown": "",
+      "bounds": {
+        "top": 0,
+        "left": 0,
+        "width": 304,
+        "height": 304
+      },
+      "tileFilter": {
+        "timeframe": ""
+      },
+      "queries": [
+        {
+          "id": "A",
+          "metric": "builtin:service.response.time",
+          "spaceAggregation": "PERCENTILE_90",
+          "timeAggregation": "DEFAULT",
+          "splitBy": [
+            "dt.entity.service"
+          ],
+          "filterBy": {
+            "filterOperator": "AND",
+            "nestedFilters": [
+              {
+                "filter": "dt.entity.service",
+                "filterType": "NAME",
+                "filterOperator": "OR",
+                "nestedFilters": [],
+                "criteria": [
+                  {
+                    "value": "podtatohead-main",
+                    "evaluator": "IN"
+                  }
+                ]
+              }
+            ],
+            "criteria": []
+          }
+        }
+      ],
+      "assignedEntities": null,
+      "filterConfig": {
+        "type": "",
+        "customName": "",
+        "defaultName": "",
+        "chartConfig": {
+          "legendShown": false,
+          "type": "",
+          "series": null,
+          "resultMetadata": {}
+        },
+        "filtersPerEntityType": null
+      }
+    },
+    {
+      "name": "Markdown",
+      "tileType": "MARKDOWN",
+      "configured": true,
+      "query": "",
+      "type": "",
+      "customName": "",
+      "markdown": "KQG.Total.Pass=90%;KQG.Total.Warning=75%;KQG.Compare.WithScore=pass;KQG.Compare.Results=1;KQG.Compare.Function=avg\n",
+      "bounds": {
+        "top": 76,
+        "left": 342,
+        "width": 874,
+        "height": 38
+      },
+      "tileFilter": {
+        "timeframe": ""
+      },
+      "queries": null,
+      "assignedEntities": null,
+      "filterConfig": {
+        "type": "",
+        "customName": "",
+        "defaultName": "",
+        "chartConfig": {
+          "legendShown": false,
+          "type": "",
+          "series": null,
+          "resultMetadata": {}
+        },
+        "filtersPerEntityType": null
+      }
+    }
+  ]
+}
