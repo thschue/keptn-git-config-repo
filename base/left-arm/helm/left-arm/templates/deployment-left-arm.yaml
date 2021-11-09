@@ -1,4 +1,6 @@
-{{ $componentName := "left-arm" }}
+{{- if not .Values.bluegreen.enabled }}
+
+  {{ $componentName := "left-arm" }}
 {{ $repoBasename := .Values.leftArm.repositoryBasename }}
 {{ $repoTag := .Values.leftArm.tag }}
 ---
@@ -72,3 +74,5 @@ spec:
           #     port: http
           resources:
             {{- toYaml .Values.resources | nindent 12 }}
+
+  {{- end }}

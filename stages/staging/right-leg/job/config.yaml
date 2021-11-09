@@ -12,3 +12,16 @@ actions:
           - sh
         args:
           - /keptn/k6/run-smoke-test.sh
+
+  - name: "k6-chaos"
+    events:
+      - name: "sh.keptn.event.test.triggered"
+    tasks:
+      - name: "k6"
+        files:
+          - k6
+        image: "loadimpact/k6"
+        cmd:
+          - sh
+        args:
+          - /keptn/k6/run-chaos-test.sh
