@@ -1,0 +1,63 @@
+affinity: {}
+autoscaling:
+    enabled: true
+    maxReplicas: 6
+    minReplicas: 2
+    targetCPUUtilizationPercentage: 80
+bluegreen:
+    enabled: false
+fullnameOverride: ""
+hats:
+    repositoryBasename: podtato-hats
+    servicePort: 9001
+    serviceType: ClusterIP
+    tag: v1-latest-dev
+images:
+    pullPolicy: IfNotPresent
+    pullSecrets: []
+    repositoryDirname: ghcr.io/podtato-head
+ingress:
+    annotations: {}
+    enabled: false
+    hosts:
+        - host: chart-example.local
+          paths: []
+    tls: []
+leftArm:
+    repositoryBasename: podtato-left-arm
+    servicePort: 9003
+    serviceType: ClusterIP
+    tag: v1-latest-dev
+leftLeg:
+    repositoryBasename: podtato-left-leg
+    servicePort: 9002
+    serviceType: ClusterIP
+    tag: v1-latest-dev
+main:
+    repositoryBasename: podtato-main
+    servicePort: 9000
+    serviceType: LoadBalancer
+    tag: v1-latest-dev
+nameOverride: ""
+nodeSelector: {}
+podAnnotations: {}
+podSecurityContext: {}
+replicaCount: 2
+resources: {}
+rightArm:
+    repositoryBasename: podtato-right-arm
+    servicePort: 9005
+    serviceType: ClusterIP
+    tag: 'distroless-v2-latest-dev'
+rightLeg:
+    repositoryBasename: podtato-right-leg
+    servicePort: 9004
+    serviceType: ClusterIP
+    tag: v1-latest-dev
+securityContext: {}
+serviceAccount:
+    annotations: {}
+    create: true
+    name: ""
+stage: dev
+tolerations: []
