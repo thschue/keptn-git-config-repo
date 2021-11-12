@@ -37,7 +37,7 @@ main:
     repositoryBasename: podtato-main
     servicePort: 9000
     serviceType: ClusterIP
-    tag: 'distroless-v4-latest-dev'
+    tag: 'distroless-v1-latest-dev'
 nameOverride: ""
 nodeSelector: {}
 podAnnotations: {}
