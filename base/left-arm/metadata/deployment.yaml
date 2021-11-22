@@ -1,4 +1,4 @@
 metadata:
-  imageVersion: distroless-v3-latest-dev
+  imageVersion: distroless-v2-latest-dev
   gitCommit: 6ff28ab6b9b7af6ea4b92e63ac7b542e9b46fb3f
   author: thomas.schuetz@dynatrace.com
