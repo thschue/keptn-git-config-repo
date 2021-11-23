@@ -1,6 +1,0 @@
-config:
-  - tagging: "tagging.json"
-
-tagging:
-  - name: "{{ .Env.KEPTN_STAGE }}"
-  - namespace: "{{ .Env.KEPTN_STAGE }}"
