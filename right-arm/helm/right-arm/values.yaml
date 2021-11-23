@@ -48,7 +48,7 @@ rightArm:
     repositoryBasename: podtato-right-arm
     servicePort: 9005
     serviceType: ClusterIP
-    tag: 'distroless-v2-latest-dev'
+    tag: 'distroless-v1-latest-dev'
 rightLeg:
     repositoryBasename: podtato-right-leg
     servicePort: 9004
