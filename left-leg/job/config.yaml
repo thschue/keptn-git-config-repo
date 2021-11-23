@@ -1,0 +1,42 @@
+apiVersion: v2
+actions:
+  - name: "infrastructure"
+    events:
+      - name: "sh.keptn.event.infrastructure-delivery.triggered"
+    tasks:
+      - name: "terraform"
+        files:
+          - terraform
+        image: "hashicorp/terraform:1.0.6"
+        cmd:
+          - sh
+        args:
+          - /keptn/terraform/terraform.sh
+        env:
+          - name: terraform-google-creds
+            valueFrom: secret
+          - name: keptn-api-token
+            valueFrom: secret
+          - name: keptn-hostname
+            valueFrom: secret
+
+  - name: "k6-smoke"
+    events:
+      - name: "sh.keptn.event.smoke-test.triggered"
+    tasks:
+      - name: "k6"
+        files:
+          - k6
+        image: "loadimpact/k6"
+        cmd:
+          - sh
+        args:
+          - /keptn/k6/run-smoke-test.sh
+
+  - name: "release"
+    events:
+      - name: "sh.keptn.event.release.triggered"
+    tasks:
+      - name: "argo-promote"
+        image: "quay.io/argoproj/kubectl-argo-rollouts:master"
+        args: ["promote","podtato-left-leg","-n","podtatohead-dev"]
